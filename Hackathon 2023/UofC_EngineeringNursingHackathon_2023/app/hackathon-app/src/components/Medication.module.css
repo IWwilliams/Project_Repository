@@ -1,0 +1,10 @@
+.medicationContainer {
+  display: flex;
+  flex-direction: column;
+}
+.medicationContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}

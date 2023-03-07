@@ -1,0 +1,16 @@
+.patientListContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.Button {
+  color: white;
+}
+
+.patients {
+  position: relative;
+  top: 6rem;
+}

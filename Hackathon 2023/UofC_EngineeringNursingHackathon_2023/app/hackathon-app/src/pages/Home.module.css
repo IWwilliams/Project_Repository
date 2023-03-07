@@ -1,0 +1,16 @@
+.home {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 1rem;
+}
