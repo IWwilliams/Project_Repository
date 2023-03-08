@@ -1,0 +1,14 @@
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.selectDate {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: center;
+}
+.selectDate p {
+  display: inline-block;
+}
