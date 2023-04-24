@@ -1,0 +1,27 @@
+.info h4 {
+  margin: 0rem 0 0.7rem 0;
+  font-size: 1.1rem;
+  position: relative;
+  top: 0;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0.2rem 0 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%;
+}
+
+.info:last-child {
+  margin-bottom: 1rem;
+}

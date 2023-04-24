@@ -1,0 +1,125 @@
+.circleButton {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(159, 161, 164, 0.44);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.positionCenter {
+  top: 45%;
+  right: 45%;
+}
+
+.positionLeft {
+  top: 4rem;
+  right: 4rem;
+}
+
+.play {
+  margin-left: 10px;
+  align-self: center;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 1rem 0rem 1.1rem 1.7rem;
+  border-color: transparent transparent transparent white;
+}
+
+.stop {
+  height: 1.5rem;
+  width: 1.5rem;
+  align-self: center;
+  border: solid;
+  box-sizing: border-box;
+  border-color: white;
+  opacity: 0.5;
+}
+
+.circleButton:hover {
+  background-color: rgb(169, 160, 33);
+}
+
+.notify {
+  background-color: rgba(159, 161, 164, 0.44);
+  animation: flash 3s;
+}
+
+@keyframes flash {
+  0% {
+    background-color: rgb(169, 160, 33);
+    top: 45%;
+  }
+  16% {
+    background-color: rgba(159, 161, 164, 0.44);
+    top: 42%;
+  }
+  32% {
+    background-color: rgb(169, 160, 33);
+    top: 45%;
+  }
+  48% {
+    background-color: rgba(159, 161, 164, 0.44);
+    top: 42%;
+  }
+  64% {
+    background-color: rgb(169, 160, 33);
+    top: 45%;
+  }
+  80% {
+    background-color: rgba(159, 161, 164, 0.44);
+    top: 42%;
+  }
+  96% {
+    background-color: rgb(169, 160, 33);
+    top: 45%;
+  }
+}
+
+@media (min-width: 600px) {
+  .positionCenter {
+    top: 45%;
+    right: 50%;
+  }
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .positionCenter {
+    top: 40%;
+    right: 50%;
+  }
+  @keyframes flash {
+    0% {
+      background-color: rgb(169, 160, 33);
+      top: 38%;
+    }
+    16% {
+      background-color: rgba(159, 161, 164, 0.44);
+      top: 40%;
+    }
+    32% {
+      background-color: rgb(169, 160, 33);
+      top: 38%;
+    }
+    48% {
+      background-color: rgba(159, 161, 164, 0.44);
+      top: 40%;
+    }
+    64% {
+      background-color: rgb(169, 160, 33);
+      top: 38%;
+    }
+    80% {
+      background-color: rgba(159, 161, 164, 0.44);
+      top: 40%;
+    }
+    96% {
+      background-color: rgb(169, 160, 33);
+      top: 38%;
+    }
+  }
+}

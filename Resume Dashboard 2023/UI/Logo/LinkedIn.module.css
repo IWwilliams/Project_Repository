@@ -1,0 +1,92 @@
+.linkedin-icon-bg {
+      display:flex;
+      flex-direction: row;
+      background-color:  rgb(2, 2, 10);
+      height: 1.30rem;
+      width: 1.28rem;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.784);
+      align-items: flex-end;
+    }
+    .i-col{
+      display:flex;
+      flex-direction: column;
+      width: 35%;
+      height:80%;
+      justify-content:flex-end;
+      margin: 10% 0;
+      padding: 0;
+      background: none;
+    }
+      .i {
+        height: 50%;
+        width: 38%;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.784);
+      }
+      .dot{
+          align-self: center;
+          content: "";
+          height: 0.2rem;
+          width: 0.2rem;
+          border-radius: 50%;
+          margin-bottom: 25%;
+          background-color: rgba(255, 255, 255, 0.784);
+        }
+      
+        .n-col{
+          display:flex;
+          flex-direction: row;
+          width: 50%;
+          height:80%;
+          margin: 10% 0;
+          background: none;
+        }
+
+      .n {
+        height: 53%;
+        width: 30%;
+        align-self: flex-end;
+        background-color: rgba(255, 255, 255, 0.784);
+      }
+        .n-hump {
+          content: "";
+          border-radius: 5000px 5000px 0 0;
+          height: 54%;
+          width: 53%;
+          align-self: flex-end;
+          margin:0;
+          z-index: 0;
+          background-color: rgba(255, 255, 255, 0.784);
+        }
+       
+        .n-gap{
+          position: relative;
+          content: "";
+          background-color:  rgb(2, 2, 10);
+          border-radius: 5000px 5000px 0 0;
+          height: 38%;
+          width: 30%;
+          bottom: 0%;
+          right: 50%;
+          align-self: flex-end;
+          z-index: 100000;
+        }
+.linkedin-icon-bg:hover .i{
+  background-color: rgb(169, 160, 33);
+}
+.linkedin-icon-bg:hover .dot{
+  background-color: rgb(169, 160, 33);
+}
+.linkedin-icon-bg:hover .n{
+  background-color: rgb(169, 160, 33);
+}
+.linkedin-icon-bg:hover .n-hump{
+  background-color:rgb(169, 160, 33);
+}
+.linkedin-icon-bg:hover {
+  border-color: rgb(169, 160, 33);
+}

@@ -1,0 +1,161 @@
+.container {
+  background-color: rgb(254, 251, 249);
+  padding: 0.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 0;
+  font-size: 2rem;
+  color: black;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-thickness: 7px;
+  text-decoration-color: rgb(169, 160, 33);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+  -webkit-text-decoration-thickness: 7px;
+  -webkit-text-decoration-color: rgb(169, 160, 33);
+}
+
+.Contact-card {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  height: 100%;
+  width: 96%;
+  margin: 0 1rem 2rem 1rem;
+  background-color: rgba(232, 222, 222, 0.38);
+}
+
+.section {
+  margin: 2% 2% 2% 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: black;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 70%;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 80%;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.infoContainer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.infoContainer h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.infoWrapper {
+  padding: 0rem;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.contactSection h5 {
+  font-weight: normal;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.column2 {
+  margin-top: 1rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .section {
+    margin: 2% 2% 2% 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: black;
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .imageContainer img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .infoContainer {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .infoContainer h3 {
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .infoWrapper {
+    padding: 0rem;
+  }
+
+  .contactSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  .contactSection h5 {
+    font-weight: normal;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+  }
+
+  .column2 {
+    width: 70%;
+  }
+}

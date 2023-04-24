@@ -1,0 +1,53 @@
+.content {
+  width: 100%;
+}
+
+.menuButton {
+  position: fixed;
+  top: 5%;
+  z-index: 1000000000000;
+  margin-left: -50px;
+  /* opacity: 0; */
+}
+
+.hidden {
+  margin-left: 0px;
+  animation: slide 1.7s;
+  /* background-color: rgba(0, 0, 0, 0.44); */
+  opacity: 1;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 12rem;
+    background-color: transparent;
+  }
+  90% {
+    margin-left: 1px;
+    background-color: transparent;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 0px;
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+.visible {
+  margin-left: 12rem;
+  animation: slideOut 1.5s;
+  /* background-color: rgba(0, 0, 0, 0.44); */
+  opacity: 1;
+}
+
+@keyframes slideOut {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 12rem;
+    background-color: transparent;
+  }
+}

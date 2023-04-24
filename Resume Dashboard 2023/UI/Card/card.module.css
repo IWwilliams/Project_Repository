@@ -1,0 +1,7 @@
+.card {
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  min-width: fit-content;
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(93, 92, 92, 0.624);
+}

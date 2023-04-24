@@ -1,0 +1,78 @@
+.Home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.Home-Nav {
+  min-height: 100%;
+  display: none;
+}
+
+.content {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.visible {
+  min-width: 15rem;
+  animation: scrollIn 1.5s forwards;
+}
+
+@keyframes scrollIn {
+  0% {
+    min-width: 0rem;
+  }
+
+  100% {
+    min-width: 15rem;
+  }
+}
+
+.hidden {
+  min-width: 0rem;
+  animation: scrollOut 1.5s forwards;
+}
+
+@keyframes scrollOut {
+  0% {
+    min-width: 15rem;
+  }
+
+  100% {
+    min-width: 0rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .Home-Nav {
+    min-height: 100%;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .visible {
+    min-width: 5rem;
+    animation: scrollIn 1.6s forwards;
+  }
+  .Home-Nav {
+    min-height: 100%;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1300px) {
+  .visible {
+    min-width: 5rem;
+    animation: scrollIn 1.7s forwards;
+  }
+  .Home-Nav {
+    min-height: 100%;
+    display: inline-block;
+  }
+}

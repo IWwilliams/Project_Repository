@@ -1,0 +1,66 @@
+.frame {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 5.5rem;
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 255, 255),
+    rgb(192, 192, 192),
+    rgb(255, 255, 255)
+  );
+  height: 6.8rem;
+  /* border: 0.3rem solid rgb(255, 255, 255); */
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgba(215, 215, 215, 0.425);
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(151, 151, 151, 0.666);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60%;
+}
+.emblemContainer {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: auto 0;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(233, 195, 7, 0.7);
+  background-image: linear-gradient(50deg, gold, goldenrod, gold);
+  border: 5px solid rgba(218, 165, 32, 0.429);
+}
+.emblem {
+  align-self: center;
+  font-size: 0.9rem;
+}
+
+.labelContainer {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.frame h5 {
+  margin: 0 0 0.5rem 0;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 600;
+  -webkit-box-shadow: 2px 3px 4px 0px rgba(85, 85, 85, 0.6);
+  background-color: rgb(241, 241, 241);
+}
+
+.award {
+  padding: 10%;
+  height: 80%;
+  width: 60%;
+  align-self: center;
+}

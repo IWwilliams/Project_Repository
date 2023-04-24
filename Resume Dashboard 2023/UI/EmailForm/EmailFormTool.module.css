@@ -1,0 +1,198 @@
+.title {
+  text-decoration: underline;
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+  color: rgba(0, 0, 0, 0.809);
+}
+.emailFormContainer {
+  display: flex;
+  margin: auto auto;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+  border: 3px solid rgba(47, 47, 47, 0.228);
+  height: fit-content;
+  max-width: 95%;
+  min-width: 95%;
+  /* -webkit-box-shadow: 1px 2px 5px 0px rgba(8, 7, 7, 0.48); */
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+
+.formFields input,
+textarea {
+  margin: 0.5rem 0;
+  padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+  border-radius: 10px;
+  border: 2px solid rgb(178, 178, 178);
+  width: auto;
+}
+
+.NameEmailContainer {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  width: 95%;
+  height: 1.5rem;
+}
+.email {
+  width: 95%;
+  height: 1.5rem;
+}
+
+.subject {
+  width: 95%;
+  height: 1.5rem;
+}
+
+.message {
+  margin: 0.5rem;
+  height: 10rem;
+  font-family: sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.Button {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  background-color: rgba(2, 2, 10, 0.941);
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  border-radius: 120px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.Button p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.gg-mail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 14px;
+  border: 2px solid;
+  margin-right: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 18px;
+  border-radius: 2px;
+  border-color: rgba(255, 255, 255, 0.952);
+}
+
+.leftline,
+.rightline {
+  background-color: rgba(255, 255, 255, 0.952);
+  position: relative;
+  top: -7px;
+  height: 16px;
+  width: 2px;
+  border-radius: 3px;
+}
+.leftline {
+  transform: rotate(-55deg);
+}
+.rightline {
+  transform: rotate(55deg);
+}
+
+.Button:hover {
+  font-weight: bolder;
+  color: yellow;
+}
+
+.Button:hover .gg-mail {
+  border-color: yellow;
+  transition: 250ms;
+}
+.Button:hover .rightline {
+  background-color: yellow;
+  transition: 250ms;
+}
+.Button:hover .leftline {
+  background-color: yellow;
+  transition: 250ms;
+}
+.Button:active {
+  background-color: rgb(83, 163, 40);
+}
+
+.messageModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.symbol {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 1.7rem;
+  border-radius: 50%;
+  border: 10px solid rgba(0, 0, 0, 0.264);
+}
+
+.check {
+  color: green;
+  font-size: 3rem;
+  border-color: green;
+}
+
+.x {
+  color: red;
+  font-size: 3rem;
+  border-color: red;
+}
+
+.modalMessage {
+  text-align: center;
+  width: 60%;
+}
+.modalMessage p {
+  font-size: 1.7rem;
+  text-align: center;
+}
+@media (min-width: 1090px) {
+  .emailFormContainer {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+  .NameEmailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .name {
+    min-width: 40%;
+    height: 1.5rem;
+  }
+  .email {
+    min-width: 50%;
+    height: 1.5rem;
+  }
+
+  .subject {
+    height: 1.5rem;
+  }
+}

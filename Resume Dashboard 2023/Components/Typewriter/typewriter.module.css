@@ -1,0 +1,354 @@
+.container {
+  position: absolute;
+  top: 70%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  max-width: 90%;
+  min-width: 90%;
+  /* border-radius: 0% 0% 100% 100%; */
+  background-image: linear-gradient(
+    0deg,
+    rgba(29, 29, 29, 0.639),
+    transparent,
+    transparent
+  );
+}
+
+.name {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  flex-wrap: nowrap;
+  margin: 1rem 1rem 1rem 1rem;
+  border-bottom: 2px solid white;
+}
+.achievement {
+  z-index: 2000;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  margin: 0.2rem 3rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.phaseIn {
+  animation: phaseIn 3s;
+}
+
+@keyframes phaseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container::before,
+.container::after,
+span::before,
+span::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.container::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+.container::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+span::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
+span::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.nofade-me {
+  opacity: 1;
+  z-index: 1000;
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-me {
+  opacity: 0;
+  z-index: 0;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    max-width: 90%;
+    min-width: 90%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+  .name {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 2.5rem;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    max-width: 90%;
+    min-width: 90%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+
+  .name {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 1rem 1rem 1rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 3rem;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    max-width: 45%;
+    min-width: 45%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+  .name {
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 1rem 1rem 1rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 3rem;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1100px) {
+  .container {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    max-width: 45%;
+    min-width: 45%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+  .name {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 1rem 1rem 1rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 3rem;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1300px) {
+  .container {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    max-width: 45%;
+    min-width: 45%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+
+  .name {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 1rem 1rem 1rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 3rem;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .container {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    max-width: 90%;
+    min-width: 90%;
+    /* border-radius: 0% 0% 100% 100%; */
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 29, 29, 0.639),
+      transparent,
+      transparent
+    );
+  }
+  .name {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-wrap: nowrap;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    border-bottom: 2px solid white;
+  }
+  .achievement {
+    z-index: 2000;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    margin: 0.2rem 2.5rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+}

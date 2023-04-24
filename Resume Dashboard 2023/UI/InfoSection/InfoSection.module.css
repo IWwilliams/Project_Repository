@@ -1,0 +1,14 @@
+.SectionInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.design {
+  height: max-content;
+}
+
+.info {
+  width: 100%;
+}

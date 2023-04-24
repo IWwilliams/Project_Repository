@@ -1,0 +1,53 @@
+.menuButton {
+  cursor: pointer;
+  z-index: 100000000;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 55%;
+  height: 6%;
+  background-color: rgb(207, 179, 21);
+  margin: 5% 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.bar1.visible {
+  transform: translate(0, 6px) rotate(-45deg);
+  width: 40%;
+}
+
+/* Fade out the second bar */
+.bar2.visible {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.bar3.visible {
+  transform: translate(0, -9px) rotate(45deg);
+  width: 40%;
+}
+
+@media (min-width: 700px) {
+  .menuButton {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    width: 1px;
+    height: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

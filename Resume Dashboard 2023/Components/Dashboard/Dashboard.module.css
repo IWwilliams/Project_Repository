@@ -1,0 +1,67 @@
+.container {
+  background-color: rgb(254, 251, 249);
+  padding: 0.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.header {
+  margin-top: 0;
+  font-size: 2rem;
+  color: rgb(2, 2, 10);
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-thickness: 7px;
+  text-decoration-color: rgb(169, 160, 33);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+  -webkit-text-decoration-thickness: 7px;
+  -webkit-text-decoration-color: rgb(169, 160, 33);
+}
+
+.Dashboard-card {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  height: 100%;
+  max-width: 90%;
+  width: 90%;
+  margin: 0 1rem 2rem 1rem;
+  background-color: rgba(232, 222, 222, 0.38);
+}
+
+.section {
+  margin: 2% 2% 2% 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: black;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (min-width: 1122px) {
+  .section {
+    margin: 1% 2% 2% 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: black;
+  }
+  .column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

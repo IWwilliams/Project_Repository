@@ -1,0 +1,240 @@
+.routes {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  margin: 1.8rem 0;
+  margin-top: 2.9rem;
+}
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  color: rgba(255, 255, 255, 0.784);
+  width: 75%;
+  margin-bottom: 1rem;
+  padding: 0.2rem 1.5rem;
+  cursor: pointer;
+}
+
+.img-icon {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Button:hover {
+  border: 3px solid rgb(211, 205, 205);
+  font-weight: bolder;
+  transition: 250ms;
+}
+
+.activePage {
+  color: rgb(169, 160, 33);
+  border: 3px solid rgb(206, 211, 205);
+  font-weight: bolder;
+  transition: 250ms;
+}
+
+.Button:hover .img-icon {
+  color: rgb(169, 160, 33);
+  transition: 250ms;
+}
+
+.Button:hover h2 {
+  color: white;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Button h2 {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  color: rgba(255, 255, 255, 0.784);
+}
+
+.gg-home {
+  background: linear-gradient(to left, currentColor 5px, transparent 0)
+      no-repeat 0 bottom/4px 2px,
+    linear-gradient(to left, currentColor 5px, transparent 0) no-repeat right
+      bottom/4px 2px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 18px;
+  height: 14px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -2px;
+}
+
+.gg-home::after,
+.gg-home::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-home::before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 4px;
+  transform: rotate(45deg);
+  top: -5px;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  left: 0;
+}
+
+.gg-home::after {
+  width: 8px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  left: 3px;
+  bottom: 0;
+}
+
+.gg-user {
+  display: block;
+  transform: scale(var(--ggs, 1));
+  box-sizing: border-box;
+  width: 12px;
+  height: 18px;
+}
+.gg-user::after,
+.gg-user::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border: 2px solid;
+}
+.gg-user::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+  top: 0;
+  left: 2px;
+}
+.gg-user::after {
+  width: 12px;
+  height: 9px;
+  border-bottom: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  top: 9px;
+}
+
+.gg-notes {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 20px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 3px;
+}
+.gg-notes::after,
+.gg-notes::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  height: 2px;
+  background: currentColor;
+  left: 2px;
+}
+.gg-notes::before {
+  box-shadow: 0 4px 0, 0 8px 0;
+  width: 12px;
+  top: 2px;
+}
+.gg-notes::after {
+  width: 6px;
+  top: 14px;
+}
+
+.gg-list-tree {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  transform: scale(var(--ggs, 1));
+  background: linear-gradient(to left, currentcolor 8px, transparent 0)
+      no-repeat left top/8px 8px,
+    linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat center
+      3px/8px 2px,
+    linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat 10px
+      17px/6px 2px,
+    linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat 10px 3px/2px
+      16px;
+}
+.gg-list-tree::after,
+.gg-list-tree::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid;
+  right: 0;
+}
+.gg-list-tree::after {
+  bottom: 0;
+}
+
+.gg-toolbox {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 2px;
+}
+.gg-toolbox::after,
+.gg-toolbox::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.gg-toolbox::before {
+  border: 2px solid;
+  border-bottom: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  left: 4px;
+  width: 10px;
+  height: 4px;
+  top: -5px;
+}
+.gg-toolbox::after {
+  width: 18px;
+  height: 2px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-shadow: 0 -2px 0, inset 4px 0 0, inset -4px 0 0;
+  top: 4px;
+}

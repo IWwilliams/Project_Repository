@@ -1,0 +1,110 @@
+.container {
+  background-color: rgb(242, 245, 248);
+  padding: 0.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 0;
+  font-size: 2rem;
+  color: black;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-thickness: 7px;
+  text-decoration-color: rgb(169, 160, 33);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+  -webkit-text-decoration-thickness: 7px;
+  -webkit-text-decoration-color: rgb(169, 160, 33);
+}
+
+.Resume-card {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  height: 60vh;
+  width: 96%;
+  max-width: 96%;
+  min-width: 96%;
+  margin: 0 1rem 2rem 1rem;
+  background-color: rgba(232, 222, 222, 0.38);
+}
+
+.section {
+  margin: 2% 0%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pageContainer {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(8, 112, 203, 0);
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: 85%;
+  max-width: 85%;
+  min-width: 85%;
+  background-color: rgb(159, 159, 159);
+}
+
+.page {
+  margin-bottom: 1rem;
+  border: 2px solid rgba(8, 112, 203, 0);
+  align-self: center;
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.section:hover .pageContainer {
+  border: 2px solid rgb(8, 112, 203);
+}
+
+.toolBarContainer {
+  position: relative;
+  left: 40%;
+  top: -50px;
+  height: 0rem;
+}
+
+@media (min-width: 600px) {
+  .Resume-card {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    height: 90vh;
+    width: 96%;
+    max-width: 96%;
+    min-width: 96%;
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+.pointerEventOff {
+  pointer-events: none;
+}

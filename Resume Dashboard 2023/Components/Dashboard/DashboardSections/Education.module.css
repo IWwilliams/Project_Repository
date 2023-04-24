@@ -1,0 +1,87 @@
+.education-header {
+  margin: 0;
+  margin-bottom: 0.6rem;
+  color: rgb(2, 2, 10);
+  font-size: 1.4rem;
+}
+/* * {
+  color: black;
+} */
+.header h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.test {
+  height: 8.2rem;
+  align-self: center;
+  margin: 0rem 0.6rem 0rem 1rem;
+}
+p {
+  margin: 0.2rem 0 0.3rem 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.placks {
+  display: flex;
+  width: fit-content;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+
+.phaseIn {
+  opacity: 1;
+  animation: phaseIn 800ms;
+}
+
+@keyframes phaseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.schoolSection {
+  margin-bottom: 0.6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.infoExtra {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.infoExtraP {
+  font-size: 0.8rem;
+  margin: 0 0 0 5px;
+}
+.arrow {
+  min-height: 1rem;
+  max-height: 1rem;
+  height: 1rem;
+  max-width: 0.8rem;
+}
+@media (min-width: 1347px) {
+  .placks {
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}

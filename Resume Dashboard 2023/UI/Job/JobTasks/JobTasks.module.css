@@ -1,0 +1,49 @@
+.bullet {
+  width: 10%;
+  align-self: flex-start;
+}
+
+.bullet img {
+  width: 55%;
+  overflow: hidden;
+  margin: auto auto;
+}
+
+.liInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 10%;
+}
+
+.liColumn {
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+}
+.liColumn p {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0.2rem 0;
+}
+
+.phaseIn {
+  opacity: 1;
+  animation: phaseIn 800ms;
+}
+
+@keyframes phaseIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
