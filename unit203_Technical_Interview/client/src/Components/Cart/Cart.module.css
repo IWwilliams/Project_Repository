@@ -1,0 +1,25 @@
+.cart {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.header h2 {
+  margin: 0rem;
+}
+.cartItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addToCartForm {
+  display: flex;
+  flex-direction: row;
+}

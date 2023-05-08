@@ -1,0 +1,25 @@
+.cartTotal {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.gridContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 30px;
+  font-size: 0.9rem;
+  row-gap: 3px;
+}
+
+.gridItemRight {
+  text-align: end;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gridItemLeft {
+  text-align: start;
+  grid-column: span 1;
+  grid-row: span 1;
+}

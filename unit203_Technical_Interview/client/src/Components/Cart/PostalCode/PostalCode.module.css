@@ -1,0 +1,15 @@
+.postalInput {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.lable {
+  margin: 0 1rem;
+}
+
+.postalInput input {
+  width: 4rem;
+}
