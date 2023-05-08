@@ -1,0 +1,368 @@
+@startuml
+
+allow_mixing
+scale max 1024 width
+scale max 800 height
+
+package model #FFFCEF
+{
+class Offering {
+	-section: int
+	-theCourse: Course
+	-studentList: ArrayList<Registration> 
+	+addStudent(r: Registration): void
+	+Offering(section: int)
+	+getSection(): int
+	+setSection(section: int): void
+	+setTheCourse(theCourse: Course): void
+	+isRunning(): boolean
+	+getTheCourseName(): String
+	+getTheCourseId(): int
+	+removeStudent(r: Registration): void
+	+toString(): String
+}
+
+class Student  {
+	-name: String
+	-id: int
+	+Student(name: String, id: int)
+	+addCourse(r: Registration): void
+	+getName(): String
+	+setName(name: String): void
+	+getId(): int
+	+setId(id: int): void
+	+removeCourse(r: Registration): void
+	+courseListSize(): boolean
+	+registerForCourse(cat: CourseCat, courseName: String, courseId: int, secNumber: int): int
+	+deregisterForCourse(cat: CourseCat, courseName: String, courseId: int, secNumber: int): int
+	+toString(): String
+	+equals(o: Object): boolean
+}
+
+class Registration {
+	-theOffering: Offering
+    -theStudent: Student 
+    -theGrade: char
+	+register(theStudent: Student, theOffering: Offering): void
+	+setTheGrade(theGrade: char): void
+	+getTheGrade(): char
+	+setTheOffering(theOffering: Offering): void
+	+search(courseName: String, courseId: int): Offering
+	+getCourseName(): String
+	+getCourseId(): int
+	+toString(): String
+}
+
+
+class CourseCat {
+	+CourseCat(courseList: ArrayList<Course>)
+	+searchCat(courseName: String, courseId: int): Course
+	+toString(): String
+}
+
+class Course {
+	-courseName: String
+	-courseId: int
+	-preReqs: ArrayList<Course>
+	-offeringList: ArrayList<Offering>
+	+Course(courseName: String, courseId: int)
+	+getCourseName(): String
+	+setCourseName(courseName: String): void
+	+getCourseId(): int
+	+setCourseId(courseId: int): void
+	+setPreReqs(preReqs: ArrayList<Course>): void
+	+getOffering(i: int): Offering
+	+setOfferingList(offeringList: ArrayList<Offering>): void
+	+getCourseNameId(): String
+	+toString(): String
+}
+Offering "1" -r- "*" Registration
+Course "1" -d- "*" Offering
+Student .u.|> CourseCat
+CourseCat "1" o-l- "*" Course
+Course "1" -l- "*" Course : preReqs
+Registration "*"-r-"1" Student
+
+}
+
+package view #FFFCEF
+{
+	class studentView {
+		-layoutPanel: JPanel
+		-appHeader: JLabel
+		-courseOutput: JTextArea
+		+studentView()
+		+setCourseOutput(s: String): void
+		+addVisibilityListener(listenForComponent: ComponentListener): void
+	}
+	class selectView  {
+		-list: JList
+		-listModel: DefaultListModel<String>
+		-layoutPanel: JPanel
+		-appHeader: JLabel
+		-courseOutput: JTextArea
+		-courseName: JTextArea
+		-courseID: JTextArea
+		-nameLable: JLabel
+		-IdLable: JLabel
+		+selectView()
+		+addVisibilityListener(listenForComponent: ComponentListener): void
+		+addListListener(listenForSelection: ListSelectionListener): void
+		+getSelectedElement(): String
+		+setCourseName(courseName: String): void
+		+setCourseId(courseID: String): void
+		+setcourseOutput(courseOutput: String): void
+		+addCourseToList(description: String): void
+		+statusListModel(): boolean
+		+{static} main(args: String[]): void
+	}
+	class removeView  {
+		-courseList: JList
+		-courseListModel: DefaultListModel<String>
+		-layoutPanel: JPanel
+		-Header: JLabel
+		-courseName: JTextArea
+		-courseID: JTextArea
+		-nameLable: JLabel
+		-IdLable: JLabel
+		-offeringID: JTextArea
+		-offeringLable: JLabel
+		-goButton: JButton
+		-status: JTextArea
+		+removeView()
+		+addVisibilityListener(listenForComponent: ComponentListener): void
+		+addGoButtonListener(listener: ActionListener): void
+		+addCourseListListener(listenForSelection: ListSelectionListener): void
+		+getSelectedElement(list: JList, listModel: DefaultListModel<String>): String
+		+setCourseName(courseName: String): void
+		+emptyCourseListModel(): void
+		+setCourseId(courseID: String): void
+		+getCourseName(): String
+		+getOffering(): int
+		+getCourseId(): int
+		+setOfferingField(offering: String): void
+		+addCourseToList(description: String): void
+		+getCourseList(): JList
+		+getCourseListModel(): DefaultListModel<String>
+		+setStatus(description: String): void
+		+makeStatusVisible(): void
+		+makeStatusinVisible(): void
+		+goodStatusColor(): void
+		+badStatusColor(): void
+		+warningStatusColor(): void
+	}
+	class menuView [[java:view.menuView]] {
+		-list: JList
+		-listModel: DefaultListModel<String>
+		-runButton: JButton
+		-Name: JTextField
+		-menuPanel: JPanel
+		-appHeader: JLabel
+		-nameEntry: JLabel
+		+menuView()
+		+addRunListener(listenForRunButton: ActionListener): void
+		+getListModel(): DefaultListModel<String>
+		+getSelectedElement(): String
+		+getName(): String
+		+setNameColour(c: Color): void
+	}
+	class coursesView [[java:view.coursesView]] {
+		-layoutPanel: JPanel
+		-appHeader: JLabel
+		-courseOutput: JTextArea
+		+coursesView()
+		+setCourseOutput(c: String): void
+		+{static} main(args: String[]): void
+	}
+	class addView [[java:view.addView]] {
+		-courseList: JList
+		-courseListModel: DefaultListModel<String>
+		-offeringList: JList
+		-offeringListModel: DefaultListModel<String>
+		-layoutPanel: JPanel
+		-courseHeader: JLabel
+		-offeringHeader: JLabel
+		-courseName: JTextArea
+		-courseID: JTextArea
+		-nameLable: JLabel
+		-IdLable: JLabel
+		-offeringID: JTextArea
+		-offeringLable: JLabel
+		-goButton: JButton
+		-status: JTextArea
+		+addView()
+		+addVisibilityListener(listenForComponent: ComponentListener): void
+		+addGoButtonListener(listener: ActionListener): void
+		+addCourseListListener(listenForSelection: ListSelectionListener): void
+		+addOfferingListListener(listenForSelection: ListSelectionListener): void
+		+getSelectedCourse(): String
+		+getSelectedOffering(): String
+		+setCourseName(courseName: String): void
+		+setCourseId(courseID: String): void
+		+getCourseName(): String
+		+getCourseId(): int
+		+getOffering(): int
+		+setOfferingField(offering: String): void
+		+addCourseToList(description: String): void
+		+addOfferingToList(description: String): void
+		+setStatus(description: String): void
+		+makeStatusVisible(): void
+		+makeStatusinVisible(): void
+		+goodStatusColor(): void
+		+badStatusColor(): void
+		+warningStatusColor(): void
+		+emptyCourseListModel(): void
+		+statusListModel(): boolean
+		+{static} main(args: String[]): void
+	}
+
+	JFrame <|-- addView
+	JFrame <|-- coursesView
+	JFrame <|-- menuView
+	JFrame <|-- removeView
+	JFrame <|-- selectView
+	JFrame <|-- studentView
+}
+
+package controller #FFFCEF
+{
+	
+	class CourseListListener [[java:viewController.addController$CourseListListener]] {
+		+valueChanged(e: ListSelectionEvent): void
+	}
+	class Component {
+	}
+	
+	interface ListSelectionListener {
+	}
+	
+	class goListener [[java:viewController.addController$goListener]] {
+		+actionPerformed(e: ActionEvent): void
+	}
+	
+	interface ActionListener {
+	}
+	
+	class OfferingListListener [[java:viewController.addController$OfferingListListener]] {
+		+valueChanged(e: ListSelectionEvent): void
+	}
+	
+	class visibilityListener [[java:viewController.addController$visibilityListener]] {
+		+componentShown(e: ComponentEvent): void
+	}
+	class ComponentAdapter {
+	}
+	
+	class addController {
+		-theView: addView
+		-cat: CourseCat
+		-currentUser: Student
+		+addController(theView: addView, cat: CourseCat, currentUser: Student)
+	}
+	
+	class coursesController [[java:viewController.coursesController]] {
+	-theView: coursesView
+	+coursesController(theView: coursesView, cat: CourseCat)
+	}
+	
+	class menuController [[java:viewController.menuController]] {
+	-theView: menuView
+	-av: addView
+	-studentV: studentView
+	-sv: selectView
+	-rv: removeView
+	-cv: coursesView
+	-currentUser: Student
+	+menuController(theView: menuView, currentUser: Student, av: addView, studentV: studentView, sv: selectView, rv: removeView, cv: coursesView)
+	}
+	
+	class RunListener [[java:viewController.menuController$RunListener]] {
+		+actionPerformed(e: ActionEvent): void
+	}
+	
+	class removeController [[java:viewController.removeController]] {
+	-theView: removeView
+	-cat: CourseCat
+	-currentUser: Student
+	+removeController(theView: removeView, cat: CourseCat, currentUser: Student)
+	+generateStudentRegistrations(): void
+	}
+	
+	class selectController [[java:viewController.selectController]] {
+	-theView: selectView
+	-cat: CourseCat
+	+selectController(theView: selectView, cat: CourseCat)
+	}
+	
+	class ListListener [[java:viewController.selectController$ListListener]] {
+		+valueChanged(e: ListSelectionEvent): void
+	}
+	
+	class studentController [[java:viewController.studentController]] {
+	-theView: studentView
+	-currentUser: Student
+	+studentController(theView: studentView, currentUser: Student)
+	}
+	
+	ComponentAdapter <|-- visibilityListener
+	Component <|-- ListListener
+	Component <|-- RunListener
+	ActionListener <|.. RunListener
+	ListSelectionListener <|.. ListListener
+	ListSelectionListener <|.. OfferingListListener
+	Component <|-- OfferingListListener
+	ActionListener <|.. goListener
+	Component <|-- goListener
+	ListSelectionListener <|.. CourseListListener
+	Component <|-- CourseListListener
+	
+	addController +-u- visibilityListener
+	addController +-u- CourseListListener
+	addController +-u- goListener
+	addController +-u- OfferingListListener
+	
+	removeController +-u- visibilityListener
+	removeController +-u- CourseListListener
+	removeController +-u- goListener
+
+	selectController +-u- visibilityListener
+	selectController +-u- ListListener
+
+	studentController +-u- visibilityListener
+	
+	menuController +-d- runListener
+}
+    
+    selectController o-d- "1" selectView
+	selectController o-r- "1" CourseCat
+	
+	addController o-d- "1" addView
+	addController o-r- "1" CourseCat
+	addController o-r- "1" Student
+
+	studentController o-d- "1" studentView
+	studentController o-r- "1" Student
+
+
+	coursesController o-d- "1" coursesView
+	menuController o-d- "1" menuView
+	menuController o-d- "1" addView
+	menuController o-d- "1" studentView
+	menuController o-d- "1" selectView
+	menuController o-d- "1" removeView
+	menuController o-d- "1" coursesView
+	menuController o-r- "1" Student
+	
+	removeController o-d- "1" removeView
+	removeController o-r- "1" CourseCat
+	removeController o-r- "1" Student
+	
+	coursesController o-d- "1" coursesView
+	
+	database studentData
+	database courseData
+	
+	model ..> studentData
+	model ..> courseData
+	
+@enduml

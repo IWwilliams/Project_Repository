@@ -1,0 +1,175 @@
+@startuml
+
+allow_mixing
+scale max 1024 width
+scale max 800 height
+
+package model #FFFCEF
+{
+class Offering {
+}
+
+class Student  {
+
+}
+
+class Registration {
+
+}
+
+
+class CourseCat {
+
+}
+
+class Course {
+	
+}
+Offering "1" -l- "*" Registration
+Course "1" -d- "*" Offering
+Student .u.|> CourseCat
+CourseCat "1" o-l- "*" Course
+Course "1" -l- "*" Course : preReqs
+Registration -l-* Student
+
+}
+
+package view #FFFCEF
+{
+	class studentView {
+		
+	}
+	class selectView  {
+		
+	}
+	class removeView  {
+		
+	}
+	class menuView [[java:view.menuView]] {
+		
+	}
+	class coursesView [[java:view.coursesView]] {
+		
+	}
+	class addView [[java:view.addView]] {
+		
+	}
+
+	JFrame <|-- addView
+	JFrame <|-- coursesView
+	JFrame <|-- menuView
+	JFrame <|-- removeView
+	JFrame <|-- selectView
+	JFrame <|-- studentView
+}
+
+package controller #FFFCEF
+{
+	
+	class CourseListListener [[java:viewController.addController$CourseListListener]] {
+	}
+	class Component {
+	}
+	
+	interface ListSelectionListener {
+	}
+	
+	class goListener [[java:viewController.addController$goListener]] {
+	}
+	
+	interface ActionListener {
+	}
+	
+	class OfferingListListener [[java:viewController.addController$OfferingListListener]] {
+	}
+	
+	class visibilityListener [[java:viewController.addController$visibilityListener]] {
+	}
+	class ComponentAdapter {
+	}
+	
+	class addController {
+		
+	}
+	
+	class coursesController [[java:viewController.coursesController]] {
+	
+	}
+	
+	class menuController [[java:viewController.menuController]] {
+	}
+	
+	class RunListener [[java:viewController.menuController$RunListener]] {
+		
+	}
+	
+	class removeController [[java:viewController.removeController]] {
+
+	}
+	
+	class selectController [[java:viewController.selectController]] {
+	
+	}
+	
+	class ListListener [[java:viewController.selectController$ListListener]] {
+	}
+	
+	class studentController [[java:viewController.studentController]] {
+	
+	}
+	
+	ComponentAdapter <|-- visibilityListener
+	Component <|-- ListListener
+	Component <|-- RunListener
+	ActionListener <|.. RunListener
+	ListSelectionListener <|.. ListListener
+	ListSelectionListener <|.. OfferingListListener
+	Component <|-- OfferingListListener
+	ActionListener <|.. goListener
+	Component <|-- goListener
+	ListSelectionListener <|.. CourseListListener
+	Component <|-- CourseListListener
+	
+	addController +-u- visibilityListener
+	addController +-u- CourseListListener
+	addController +-u- goListener
+	addController +-u- OfferingListListener
+	
+	removeController +-u- visibilityListener
+	removeController +-u- CourseListListener
+	removeController +-u- goListener
+
+	selectController +-u- visibilityListener
+	selectController +-u- ListListener
+
+	studentController +-u- visibilityListener
+	
+	menuController +-d- runListener
+}
+    
+    selectController o-d- "1" selectView
+	selectController o-r- "1" CourseCat
+	
+	addController o-d- "1" addView
+	addController o-r- "1" CourseCat
+	addController o-r- "1" Student
+
+	studentController o-d- "1" studentView
+	studentController o-r- "1" Student
+
+
+	coursesController o-d- "1" coursesView
+	menuController o-d- "1" menuView
+	menuController o-d- "1" addView
+	menuController o-d- "1" studentView
+	menuController o-d- "1" selectView
+	menuController o-d- "1" removeView
+	menuController o-d- "1" coursesView
+	menuController o-r- "1" Student
+	
+	removeController o-d- "1" removeView
+	removeController o-r- "1" CourseCat
+	removeController o-r- "1" Student
+	
+	coursesController o-d- "1" coursesView
+@enduml
