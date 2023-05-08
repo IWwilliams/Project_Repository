@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles/formStyle.css" >
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    <main>
+        <div class="logoMenu">
+            <img src="images/menu.png" alt="">
+          </div>
+          <br>
+        <h1 id ="welcome" class="text-center mt-4 name"></h1> 
+        <br>
+        <h1 class="mt-4 name">Menu</h2>
+        <br>
+        <section>
+            <form id="menu">
+                <div>
+                    <label class="text-center fs-6"> What would you like to do?:</label>
+                    <br><br>
+                    <input type="radio" name="menu" id="add" required value="add_course">
+                    <label for="Add">Add Course</label>
+                    <br>
+                    <input type="radio" name="menu" id="remove" value="remove_course" required>
+                    <label for="remove">Remove Course</label>
+                    <br>
+                    <input type="radio" name="menu" id="searchcourse" value="search_course" required>
+                    <label for="SearchCourse">Search Course</label>
+                    <br>
+                    <input type="radio" name="menu" id="registeredcourses" value="view_registrations" required>
+                    <label for="ViewRegisteredCourses">View Registered Courses</label>
+                    <br>
+                    <input type="radio" name="menu" id="coursecatalogue" value="view_course_catalogue" required>
+                    <label for="coursecatalogue">View Course Catalogue</label>
+                    <br>
+                    <input type="radio" name="menu" id="quit" value="quit_command" required>
+                    <label for="quit">Log Out</label>
+                    <br>
+                </div>
+                <br>
+                <button id="menu_submit" type ="submit" class="btn mt-3">Enter!</button> 
+            </form>
+        </section>
+    </main>
+</div>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <link rel="stylesheet" href="styles/formStyle.css">
+</head>
+
+<body>
+    <div class="wrapper">
+    <h1 class="text-center mt-4 name">Course Registration</h1>
+
+    <p>
+    <form id="CourseList">
+        <br>
+        <label for="course">Select the course:</label>
+        <select name="course" class="list_options_courses" id="courseIdList">
+            <option value="default" >Select Option</option>
+        </select>
+        <br>
+        <br>
+        <button style="margin:5px" , type = "submit" id="add_submit" class="btn mt-3">Select Course</button>
+    </form>
+    </p>
+
+    <div id = "section">
+    <p>
+        <form id="CourseSection">
+            <br>
+            <label for="section">Select the section:</label>
+            <select name="section" class="list_options_sections" id="courseSectionList">
+                <option value="default" id ="defaultSection">Please Select Course Prior to Section</option>
+            </select>
+            <br> 
+            <br>
+            <button style="margin:5px" , id="add_submit", class="btn mt-3" type ="submit">Add Course</button>
+        </form>
+        </p>
+        <br>
+        <button id="BackMenu" class="btn mt-3">Menu</button>
+    </div>
+    </div>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/loadCourseList.js"></script>
+    <script src="scripts/add.js"></script>
+
+</body>
+
+</html>

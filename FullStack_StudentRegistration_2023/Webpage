@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+import pandas as pd
+import dash_table
+# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+# unified = pd.read_excel(r'C:\Users\IRwillia\Desktop\Unified.xlsx')
+
+# app = dash.Dash(_name_, external_stylesheets=external_stylesheets)
+
+# app.layout = html.Div([
+#     html.H1(children='RCM Data', style={'textAlign': 'center'}),
+#     dcc.Input(id='my-id', value='initial value', type='text'),
+#     html.Div(id='my-div'
+#              ),
+#     dcc.Dropdown(
+#         id='categories',
+#         options=[{'label': i, 'value': i} for i in unified['System'].unique()],
+#         multi=False
+#     ),
+#     dash_table.DataTable(
+#         id='System and Function',
+#         columns=[{"name": i, "id": i} for i in unified.loc[:,
+#                                                            ['System', 'Function']].drop_duplicates().columns]
+#     ),
+#     dcc.Dropdown(
+#         id='Function Selector'
+#     ),
+#     dash_table.DataTable(
+#         id='Function and Functional Failure',
+#         columns=[{"name": i, "id": i} for i in unified.loc[:, [
+#             'Function', 'Functional Failure']].drop_duplicates().columns]
+#     ),
+#     dcc.Dropdown(
+#         id='Functional Failure Selector'
+#     ),
+#     dash_table.DataTable(
+#         id='Function and Mode',
+#         columns=[{"name": i, "id": i} for i in unified.loc[:, [
+#             'Functional Failure', 'Failure Mode']].drop_duplicates().columns]
+#     ),
+#     dcc.Dropdown(
+#         id='Failure Mode Selector'
+#     ),
+#     dash_table.DataTable(
+#         id='Failure Mode and Effects',
+#         columns=[{"name": i, "id": i} for i in unified.loc[:, [
+#             'Failure Mode', 'Effects']].drop_duplicates().columns]
+#     ),
+#     dash_table.DataTable(
+#         id='Corrective Tasks',
+#         columns=[{"name": i, "id": i} for i in unified.loc[:, ['Corrective Task',
+#                                                                'Corrective Task Skill', 'Corrective Task Est. Downtime']].drop_duplicates().columns]
+#     )
+# ])
+
+
+# @app.callback(
+#     Output(component_id='my-div', component_property='children'),
+#     [Input(component_id='my-id', component_property='value')]
+# )
+# def update_output_div(input_value):
+#     return 'You\'ve entered "{}"'.format(input_value)
+
+
+# @app.callback(
+#     Output(''))
+# if _name_ == '_main_':
+#     app.run_server(debug=True)
