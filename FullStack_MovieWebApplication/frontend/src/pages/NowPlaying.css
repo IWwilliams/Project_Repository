@@ -1,0 +1,15 @@
+.center {
+  margin: auto;
+  margin-top: 1%;
+  width: 40%;
+  padding: 10px;
+}
+
+.False {
+  background-color: green;
+}
+
+.True {
+  background-color: red;
+  size: 40;
+}
